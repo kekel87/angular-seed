@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier",
+    "@greenly/stylelint-config-rational-order"
+  ],
+  "rules": {
+    "declaration-empty-line-before": null,
+    "plugin/rational-order": [true, {
+      "empty-line-between-groups": true
+    }]
+  },
+  "ignoreFiles": [
+    "node_modules/**/*",
+    "dist/**/*"
+  ]
+}

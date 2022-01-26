@@ -1,0 +1,8 @@
+**/node_modules/**
+**/results/**
+**/dist/**
+tsconfig.*
+tslint.*
+.idea/**
+.vscode/**
+**/veolia-style/**

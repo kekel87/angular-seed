@@ -1,0 +1,26 @@
+@use '@angular/material' as mat;
+@use 'core/palette' as palette;
+@import 'core/var';
+
+@include mat.core($typography);
+
+@include palette.light;
+@include mat.all-component-themes($theme);
+
+@media (prefers-color-scheme: dark) {
+  @include palette.dark;
+  @include mat.all-component-colors($theme);
+}
+
+@include mat.all-component-typographies($typography);
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}

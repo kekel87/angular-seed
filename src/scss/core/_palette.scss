@@ -1,0 +1,41 @@
+@use '@angular/material' as mat;
+@use 'sass:map';
+@use 'sass:meta';
+
+@mixin palette-to-css-var($palette, $type: primary) {
+  @each $key, $color in $palette {
+    @if meta.type-of($color) != 'map' {
+      --palette-#{$type}-#{$key}: #{$color}; /* stylelint-disable-line custom-property-pattern */
+    }
+  }
+
+  @if map.has-key($palette, contrast) {
+    @each $key, $color in map.get($palette, contrast) {
+      --palette-#{$type}-contrast-#{$key}: #{$color}; /* stylelint-disable-line custom-property-pattern */
+    }
+  }
+}
+
+@mixin light() {
+  :root {
+    @include palette-to-css-var(mat.$indigo-palette, primary);
+    @include palette-to-css-var(mat.$pink-palette, accent);
+    @include palette-to-css-var(mat.$red-palette, warn);
+
+    --palette-is-dark: false;
+    @include palette-to-css-var(mat.$light-theme-foreground-palette, foreground);
+    @include palette-to-css-var(mat.$light-theme-background-palette, background);
+  }
+}
+
+@mixin dark() {
+  :root {
+    @include palette-to-css-var(mat.$blue-grey-palette, primary);
+    @include palette-to-css-var(mat.$amber-palette, accent);
+    @include palette-to-css-var(mat.$red-palette, warn);
+
+    --palette-is-dark: true;
+    @include palette-to-css-var(mat.$dark-theme-foreground-palette, foreground);
+    @include palette-to-css-var(mat.$dark-theme-background-palette, background);
+  }
+}
