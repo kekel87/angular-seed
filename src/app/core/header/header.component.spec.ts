@@ -13,6 +13,10 @@ describe('HeaderComponent', () => {
     fixture = MockRender(HeaderComponent);
   });
 
+  it(`should create`, () => {
+    expect(fixture).toBeTruthy();
+  });
+
   it('should have title', () => {
     expect(ngMocks.formatText(ngMocks.find('h1'))).toContain('Seed APP');
   });
