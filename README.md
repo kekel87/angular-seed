@@ -1,10 +1,18 @@
-# Kekel87 Angular seed
+# <img src="https://avatars.githubusercontent.com/u/22544289" width="40" height="40" style="border-radius: 50%"/> Angular seed ![angular](https://raw.githubusercontent.com/kekel87/readme-images/master/angular.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
+![angular](https://raw.githubusercontent.com/kekel87/readme-images/master/angular.png)
+![typescript](https://raw.githubusercontent.com/kekel87/readme-images/master/typescript.png)
+![rxjs](https://raw.githubusercontent.com/kekel87/readme-images/master/rxjs.png)
+![ngrx](https://raw.githubusercontent.com/kekel87/readme-images/master/ngrx.png)
+![jest](https://raw.githubusercontent.com/kekel87/readme-images/master/jest.png)
+![cypress](https://raw.githubusercontent.com/kekel87/readme-images/master/cypress.png)
+![eslint](https://raw.githubusercontent.com/kekel87/readme-images/master/eslint.png)
+![prettier](https://raw.githubusercontent.com/kekel87/readme-images/master/prettier.png)
+![github-actions](https://raw.githubusercontent.com/kekel87/readme-images/master/github-actions.png)
 
 Here is my project for new angular project, with selection and configuration of tools to ensure a good quality of code, like linter, formatter, unit tests or e2e tests.
 
-> Indeed @angular/cli doesn't impose linter or e2e test anymore.
+> Indeed [@angular/cli](https://github.com/angular/angular-cli) doesn't impose linter or e2e test anymore.
 > 
 > And doesn't seem to want to use var [jest](https://jestjs.io/fr/) for unit testing. 🤷
 
@@ -82,6 +90,7 @@ npm run build
   - [jest](https://www.npmjs.com/package/jest) with [@briebug/jest-schematic](https://www.npmjs.com/package/@briebug/jest-schematic)
     - all config put in `src/tests` folder
     - prepare `src/tests/mocks` to put tests mocks
+    - setup coverage threshold to 100 because I am a crazy person
     - [jest-createspyobj](https://www.npmjs.com/package/jest-createspyobj) for missing typed createspyobj
     - [jest-marbles](https://www.npmjs.com/package/jest-marbles) for rxjs testing
     - [ng-mocks](https://www.npmjs.com/package/ng-mocks) for greatly simplify component testing
