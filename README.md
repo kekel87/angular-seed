@@ -70,6 +70,7 @@ npm run build
     - [theming](https://material.angular.io/guide/theming) with CSS variables
     - dedicated variables file
     - **NO** global `MaterialModule` which import all the lib (tree-shaking ...) !
+    - light/dark theme auto switch with `prefers-color-scheme` (no class)
   - [ngrx](https://ngrx.io/)
     - [store](https://www.npmjs.com/package/@ngrx/store)
     - [effects](https://www.npmjs.com/package/@ngrx/effects)
