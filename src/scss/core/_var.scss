@@ -1,5 +1,6 @@
 @use '@angular/material' as mat;
 
+/* stylelint-disable custom-property-pattern */
 $primary-palette: (
   50: var(--palette-primary-50),
   100: var(--palette-primary-100),
@@ -131,6 +132,8 @@ $foreground-palette: (
   slider-off: var(--palette-foreground-slider-off),
   slider-off-active: var(--palette-foreground-slider-off-active)
 );
+/* stylelint-enable custom-property-pattern */
+
 $primary: mat.define-palette($primary-palette);
 $accent: mat.define-palette($accent-palette);
 $warn: mat.define-palette($warn-palette);
