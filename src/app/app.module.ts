@@ -4,15 +4,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
-import { MinimalRouterStateSerializer, NavigationActionTiming, StoreRouterConnectingModule } from '@ngrx/router-store';
+import { NavigationActionTiming, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { HttpClientModule } from '@angular/common/http';
 
+import { HeaderModule } from '~app/core/header/header.module';
 import { environment } from '~environment';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { reducers } from './app.reducer';
-import { HeaderModule } from './core/header/header.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,7 +23,6 @@ import { HeaderModule } from './core/header/header.module';
     HttpClientModule,
     StoreModule.forRoot(reducers, { runtimeChecks: environment.storeRuntimeChecks }),
     StoreRouterConnectingModule.forRoot({
-      serializer: MinimalRouterStateSerializer,
       navigationActionTiming: NavigationActionTiming.PostActivation,
     }),
     StoreDevtoolsModule.instrument({
@@ -34,7 +33,6 @@ import { HeaderModule } from './core/header/header.module';
     EffectsModule.forRoot([]),
     HeaderModule,
   ],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
