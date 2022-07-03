@@ -125,7 +125,7 @@
         "e2e": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "configFile": "e2e/cypress.json",
+            "configFile": "e2e/cypress.config.ts",
             "devServerTarget": "seed:serve",
             "watch": true,
             "headless": false

@@ -1,4 +1,4 @@
-describe('User Test suite', () => {
+describe('Placeholder Test suite', () => {
   beforeEach(() => {
     cy.visit('/');
   });
