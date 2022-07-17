@@ -1,5 +1,10 @@
+@use '@angular/material' as mat;
+@use 'core/responsive';
+@import 'core/var';
+
 :host {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
 
   box-sizing: border-box;
   width: 100%;
@@ -8,9 +13,26 @@
   padding: 8px;
 }
 
+:host > h2 {
+  flex: 1 1 100%;
+
+  text-align: center;
+}
+
+:host > mat-card {
+  flex: 1 1 calc(50% - 20px);
+  box-sizing: border-box;
+  margin: 10px;
+}
+
 section {
   display: table;
   margin: auto;
+
+  mat-form-field {
+    width: calc(50% - 10px);
+    margin: 5px;
+  }
 }
 
 .example-label {
@@ -44,9 +66,34 @@ section {
 
 .example-card {
   max-width: 400px;
+  margin: auto;
+
+  background: mat.get-color-from-palette($background-palette, app-bar);
 }
 
 .example-header-image {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
+}
+
+.example-margin {
+  margin: 0 12px;
+}
+
+@include responsive.x-small {
+  :host > mat-card {
+    flex: 1 1 100%;
+  }
+}
+
+@include responsive.small {
+  :host > mat-card {
+    flex: 1 1 100%;
+  }
+}
+
+@include responsive.x-large {
+  :host > mat-card {
+    flex: 1 1 calc(33% - 20px);
+  }
 }
