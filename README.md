@@ -92,8 +92,9 @@ npm run build
     - all config put in `src/tests` folder
     - prepare `src/tests/mocks` to put tests mocks
     - setup coverage threshold to 100 because I am a crazy person
-    - [jest-createspyobj](https://www.npmjs.com/package/jest-createspyobj) for missing typed createspyobj
-    - [jest-marbles](https://www.npmjs.com/package/jest-marbles) for rxjs testing
+    - ~~[jest-createspyobj](https://www.npmjs.com/package/jest-createspyobj) for missing typed createspyobj~~ Need to find better typing
+    - ~~[jest-marbles](https://www.npmjs.com/package/jest-marbles) for rxjs testing~~
+    - [jasmine-marble](https://www.npmjs.com/package/jasmine-marbles) for rxjs testing (do not trust the name, is not related to jasmine (no dependence))
     - [ng-mocks](https://www.npmjs.com/package/ng-mocks) for greatly simplify component testing
 - 🐵 E2E Test
   - [cypress](https://www.npmjs.com/package/@cypress/schematic)
