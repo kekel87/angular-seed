@@ -24,9 +24,10 @@
         "plugin:@angular-eslint/template/process-inline-templates",
         "plugin:prettier/recommended",
         "plugin:rxjs/recommended",
-        "plugin:ngrx/recommended",
+        "plugin:@ngrx/recommended-requiring-type-checking",
         "plugin:import/recommended",
-        "plugin:import/typescript"
+        "plugin:import/typescript",
+        "plugin:cypress/recommended"
       ],
       "settings": {
         "import/resolver": {
@@ -66,32 +67,10 @@
           "error",
           {
             "groups": [
-              [
-                "external",
-                "builtin",
-                "type"
-              ],
-              [
-                "internal"
-              ],
-              [
-                "index",
-                "parent",
-                "sibling"
-              ],
-              [
-                "object"
-              ]
-            ],
-            "pathGroups": [
-              {
-                "pattern": "~*",
-                "group": "internal"
-              },
-              {
-                "pattern": "~*/**",
-                "group": "internal"
-              }
+              ["external", "builtin", "type"],
+              ["internal"],
+              ["index", "parent", "sibling"],
+              ["object"]
             ],
             "newlines-between": "always",
             "alphabetize": {
@@ -101,7 +80,6 @@
         ]
       }
     },
-    // NOTE: WE ARE NOT APPLYING PRETTIER IN THIS OVERRIDE, ONLY @ANGULAR-ESLINT/TEMPLATE
     {
       "files": [
         "*.html"
@@ -111,7 +89,6 @@
       ],
       "rules": {}
     },
-    // NOTE: WE ARE NOT APPLYING @ANGULAR-ESLINT/TEMPLATE IN THIS OVERRIDE, ONLY PRETTIER
     {
       "files": [
         "*.html"
@@ -123,7 +100,6 @@
         "plugin:prettier/recommended"
       ],
       "rules": {
-        // NOTE: WE ARE OVERRIDING THE DEFAULT CONFIG TO ALWAYS SET THE PARSER TO ANGULAR (SEE BELOW)
         "prettier/prettier": [
           "error",
           {

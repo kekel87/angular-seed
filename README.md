@@ -85,9 +85,10 @@ npm run build
   - [@angular-eslint](https://www.npmjs.com/package/@angular-eslint/schematics) + [prettier](https://www.npmjs.com/package/eslint-config-prettier) for TS and HTML Template
     - eslint, @typescript-eslint, @angular-eslint recommended rules
     - [rxjs](https://www.npmjs.com/package/eslint-plugin-rxjs) plugin with recommended rules
-    - [ngrx](https://www.npmjs.com/package/eslint-plugin-ngrx) plugin with recommended rules
+    - [ngrx](https://ngrx.io/guide/eslint-plugin) plugin with recommended rules
     - [import](https://www.npmjs.com/package/eslint-plugin-import) with import/order to auto sort imports (TS alias support and three groups)
     - [unused-imports](https://www.npmjs.com/package/eslint-plugin-unused-imports) to detect and auto-clear unused imports
+    - [cypress](https://www.npmjs.com/package/eslint-plugin-cypress) plugin with recommended rules
   - [stylelint](https://www.npmjs.com/package/stylelint) + [prettier](https://www.npmjs.com/package/stylelint-config-prettier) for SCSS
     - [standard-scss](https://www.npmjs.com/package/stylelint-config-standard-scss)
     - [rational-order](https://www.npmjs.com/package/@greenly/stylelint-config-rational-order) with empty-line-between-groups
@@ -103,8 +104,6 @@ npm run build
     - [ng-mocks](https://www.npmjs.com/package/ng-mocks) for greatly simplify component testing
 - 🐵 E2E Test
   - [cypress](https://www.npmjs.com/package/@cypress/schematic)
-  - rename `cypress` folder to `e2e` to make it clearer to understand
-  - move config to `e2e` folder
   - disable `video` and `screenshotOnRunFailure`
   - I keep only the `npm run e2e` command (with configs)
 
