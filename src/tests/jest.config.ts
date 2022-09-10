@@ -1,13 +1,12 @@
+/* eslint @typescript-eslint/no-var-requires: off */
 const { pathsToModuleNameMapper } = require('ts-jest');
-const { compilerOptions } = require('../../tsconfig');
+
+const { paths } = require('../../tsconfig').compilerOptions;
 
 module.exports = {
   preset: 'jest-preset-angular',
-  setupFilesAfterEnv: [`${__dirname}/setup.js`],
-  moduleNameMapper: {
-    ...pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/' }),
-    '\\.(jpg|jpeg|png)$': `${__dirname}/mock-module.js`,
-  },
+  setupFilesAfterEnv: [`${__dirname}/setup.ts`],
+  moduleNameMapper: pathsToModuleNameMapper(paths, { prefix: '<rootDir>/' }),
   testPathIgnorePatterns: ['<rootDir>/e2e'],
   collectCoverage: true,
   coveragePathIgnorePatterns: ['/node_modules/', '.module.ts'],
