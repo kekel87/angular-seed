@@ -13,7 +13,7 @@
 Here is my project for new angular project, with selection and configuration of tools to ensure a good quality of code, like linter, formatter, unit tests or e2e tests.
 
 > Indeed [@angular/cli](https://github.com/angular/angular-cli) doesn't impose linter or e2e test anymore.
-> 
+>
 > And doesn't seem to want to use var [jest](https://jestjs.io/fr/) for unit testing. 🤷
 
 I include [@angular/material](https://material.angular.io/) with theming by CSS variables and [ngrx](https://ngrx.io/), because I use them in most of my projects.
@@ -27,12 +27,14 @@ npm start
 ```
 
 ### Linter and Formatter
+
 ```bash
 npm run format
 npm run lint
 ```
 
 You can run only specific lint/formatter if you want:
+
 ```bash
 # For TS and HTML template (AKA ng lint)
 npm run format:ng
@@ -48,17 +50,20 @@ npm run lint:stylelint
 ```
 
 ### Tests
+
 ```bash
 npm run test
 npm run e2e -- -c headless
 ```
 
 ### Build
+
 ```bash
 npm run build
 ```
 
 ## Stack and Changes
+
 - 🅰️ Core:
   - [@angular](https://angular.io/docs)
     - typed environments
@@ -81,8 +86,8 @@ npm run build
     - eslint, @typescript-eslint, @angular-eslint recommended rules
     - [rxjs](https://www.npmjs.com/package/eslint-plugin-rxjs) plugin with recommended rules
     - [ngrx](https://www.npmjs.com/package/eslint-plugin-ngrx) plugin with recommended rules
-    - [import](eslint-plugin-import) with import/order to auto sort imports (TS alias support and three groups)
-    - [unused-imports](eslint-plugin-unused-imports) to detect and auto-clear unused imports
+    - [import](https://www.npmjs.com/package/eslint-plugin-import) with import/order to auto sort imports (TS alias support and three groups)
+    - [unused-imports](https://www.npmjs.com/package/eslint-plugin-unused-imports) to detect and auto-clear unused imports
   - [stylelint](https://www.npmjs.com/package/stylelint) + [prettier](https://www.npmjs.com/package/stylelint-config-prettier) for SCSS
     - [standard-scss](https://www.npmjs.com/package/stylelint-config-standard-scss)
     - [rational-order](https://www.npmjs.com/package/@greenly/stylelint-config-rational-order) with empty-line-between-groups
@@ -110,10 +115,10 @@ CI/CD must guarantee the quality of the code without being burdensome for the de
 And it must deploy (here, in GH Pages) the application automatically.
 
 | Job          | Description                                                |
-|--------------|------------------------------------------------------------|
+| ------------ | ---------------------------------------------------------- |
 | 🚧 Install   | Installation of dependencies and creation/update of cache. |
 | 👮 Lint      | Syntax verification of the code                            |
 | ✔ Unit tests | Units tests                                                |
 | 🐵 E2E tests | E2E tests                                                  |
-| 🛠️ Build    | Build Angular application in prod config                   |
+| 🛠️ Build     | Build Angular application in prod config                   |
 | 🚀 Deploy    | Deployment on Github Pages                                 |
