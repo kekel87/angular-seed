@@ -9,7 +9,7 @@ jobs:
   install:
     name: 🚧 Install
     runs-on: ubuntu-latest
-    container: cypress/included:10.3.0
+    container: cypress/included:10.7.0
     steps:
       - uses: actions/checkout@v3
       - uses: ng-easy/npm-setup@v2
@@ -17,7 +17,7 @@ jobs:
   lint:
     name: 👮 Lint
     runs-on: ubuntu-latest
-    container: cypress/included:10.3.0
+    container: cypress/included:10.7.0
     needs: install
     steps:
       - uses: actions/checkout@v3
@@ -27,7 +27,7 @@ jobs:
   test:
     name: ✔ Unit tests
     runs-on: ubuntu-latest
-    container: cypress/included:10.3.0
+    container: cypress/included:10.7.0
     needs: install
     steps:
       - uses: actions/checkout@v3
@@ -37,7 +37,7 @@ jobs:
   e2e:
     name: 🐵 E2E tests
     runs-on: ubuntu-latest
-    container: cypress/included:10.3.0
+    container: cypress/included:10.7.0
     needs: install
     steps:
       - uses: actions/checkout@v3
@@ -47,7 +47,7 @@ jobs:
   build:
     name: 🛠️ Build
     runs-on: ubuntu-latest
-    container: cypress/included:10.3.0
+    container: cypress/included:10.7.0
     needs: install
     steps:
       - uses: actions/checkout@v3
