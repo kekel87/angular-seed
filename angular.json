@@ -82,12 +82,6 @@
           },
           "defaultConfiguration": "development"
         },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "seed:build"
-          }
-        },
         "test": {
           "builder": "@angular-builders/jest:run",
           "options": {
@@ -102,24 +96,6 @@
               "src/**/*.ts",
               "src/**/*.html"
             ]
-          }
-        },
-        "cypress-run": {
-          "builder": "@cypress/schematic:cypress",
-          "options": {
-            "devServerTarget": "seed:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "seed:serve:production"
-            }
-          }
-        },
-        "cypress-open": {
-          "builder": "@cypress/schematic:cypress",
-          "options": {
-            "watch": true,
-            "headless": false
           }
         },
         "e2e": {
