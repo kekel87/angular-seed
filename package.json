@@ -9,11 +9,11 @@
     "test": "ng test",
     "lint": "npm run lint:ng && npm run lint:prettier && npm run lint:stylelint ",
     "lint:ng": "ng lint",
-    "lint:prettier": "prettier --check \"./@(src|e2e)/**/*.@(js|scss|json)\"",
+    "lint:prettier": "prettier --check \"./@(src|cypress)/**/*.@(js|scss|json)\"",
     "lint:stylelint": "stylelint \"src/**/*.scss\"",
     "format": "npm run format:ng && npm run format:prettier && npm run format:stylelint",
     "format:ng": "ng lint --fix",
-    "format:prettier": "prettier --write \"./@(src|e2e)/**/*.@(js|scss|json)\"",
+    "format:prettier": "prettier --write \"./@(src|cypress)/**/*.@(js|scss|json)\"",
     "format:stylelint": "stylelint \"src/**/*.scss\" --fix",
     "e2e": "ng e2e"
   },
