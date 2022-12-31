@@ -145,4 +145,4 @@ $theme: (
   foreground: $foreground-palette,
   background: $background-palette,
 );
-$typography: mat.define-typography-config();
+$typography: mat.define-legacy-typography-config();

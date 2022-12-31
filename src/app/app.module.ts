@@ -8,7 +8,6 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { HeaderModule } from '~app/core/header/header.module';
-import { environment } from '~environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,14 +20,23 @@ import { reducers } from './app.reducer';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    StoreModule.forRoot(reducers, { runtimeChecks: environment.storeRuntimeChecks }),
+    StoreModule.forRoot(reducers, {
+      runtimeChecks: {
+        strictStateSerializability: true,
+        strictActionSerializability: true,
+        strictActionImmutability: true,
+        strictStateImmutability: true,
+        strictActionWithinNgZone: true,
+        strictActionTypeUniqueness: true,
+      },
+    }),
     StoreRouterConnectingModule.forRoot({
       navigationActionTiming: NavigationActionTiming.PostActivation,
     }),
     StoreDevtoolsModule.instrument({
       name: 'seed',
       maxAge: 25,
-      logOnly: environment.production,
+      logOnly: true,
     }),
     EffectsModule.forRoot([]),
     HeaderModule,

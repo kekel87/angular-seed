@@ -66,7 +66,6 @@ npm run build
 
 - 🅰️ Core:
   - [@angular](https://angular.io/docs)
-    - typed environments
   - [@angular/cli](https://angular.io/cli)
     - root scss move to dedicated folder `src/scss` (`stylePreprocessorOptions`)
     - remove `.vscode` folder because it has to remain IDE agnostic
@@ -80,7 +79,7 @@ npm run build
     - [store](https://www.npmjs.com/package/@ngrx/store)
     - [effects](https://www.npmjs.com/package/@ngrx/effects)
     - [router-store](https://www.npmjs.com/package/@ngrx/router-store) with config
-    - [store-devtools](https://www.npmjs.com/package/@ngrx/store-devtools) with config per environments
+    - [store-devtools](https://www.npmjs.com/package/@ngrx/store-devtools) with config
 - 👮 Linter/Formatter
   - [@angular-eslint](https://www.npmjs.com/package/@angular-eslint/schematics) + [prettier](https://www.npmjs.com/package/eslint-config-prettier) for TS and HTML Template
     - eslint, @typescript-eslint, @angular-eslint recommended rules
